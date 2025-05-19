@@ -24,7 +24,7 @@ from langchain.chains import LLMChain
 def load_models():
     device = "cuda" if torch.cuda.is_available() else "cpu"
     EMBED_MODEL = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2", device=device)
-    GROQ_API_KEY = "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"
+    GROQ_API_KEY = "dummy_key"
     os.environ['GROQ_API_KEY'] = GROQ_API_KEY
     groq_model = ChatGroq(model_name="llama3-70b-8192", temperature=0.3, max_tokens=512)
     urdu_splitter = RecursiveCharacterTextSplitter(
